@@ -70,6 +70,7 @@ main {
   gap: 1rem;
   padding: 10%;
 }
+
 /* #5fb523 #434b54 */
 #logout {
   background-color: #3778c2;
@@ -78,6 +79,16 @@ main {
   justify-content: flex-end;
   padding: 0 0.5rem;
   border-bottom: 1px solid #fff;
+}
+
+.btn {
+  display: grid;
+  place-items: center;
+  border-radius: 3px;
+  padding: 0.8rem;
+  width: 94%;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
 #logout .btn {
@@ -91,16 +102,6 @@ main {
 #logout .btn:hover {
   background-color: #fa3131;
   cursor: pointer;
-}
-
-.btn {
-  display: grid;
-  place-items: center;
-  border-radius: 3px;
-  padding: 0.8rem;
-  width: 94%;
-  margin: 0 auto;
-  margin-top: 10px;
 }
 
 .btn.pri,
@@ -172,7 +173,7 @@ input,
 button {
   outline: none;
   border: none;
-  padding: 0.8rem 0rem;
+  padding: 0.8rem 0;
 }
 
 .field input {
@@ -242,6 +243,6 @@ button {
 }
 
 #date {
-  opacity: .5;
+  opacity: 0.5;
   font-size: 12px;
 }
