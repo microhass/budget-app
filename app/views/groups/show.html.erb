@@ -16,7 +16,7 @@
 </div>
 
 <div id='transactions'>
-  <%= render partial: 'entities/entity', collection: @transactions %>
+  <%= render partial: 'entities/entity', collection: @group.entities %>
 
   <%= link_to "Add a new transaction", new_group_entity_path(@group), class: 'action btn' %>
 </div>

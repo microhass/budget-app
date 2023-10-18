@@ -1,6 +1,6 @@
 class EntitiesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_group
+  before_action :set_group, only: %i[ new create ]
   before_action :set_entity, only: %i[ show edit update destroy ]
 
   # GET /entities/new
@@ -12,6 +12,8 @@ class EntitiesController < ApplicationController
   # POST /entities or /entities.json
   def create
     @entity = Entity.new(entity_params)
+    @entity.groups << @group
+    @entity.author_id = current_user.id
 
     respond_to do |format|
       if @entity.save
