@@ -1,12 +1,11 @@
-<div id="<%= dom_id entity %>">
-  <p>
-    <strong>Name:</strong>
-    <%= entity.name %>
-  </p>
+<div id="entity">
+  <div>
+    <p>Transaction: <%= entity.name %></p>
+    <p>$<%= entity.amount %></p>
+  </div>
 
-  <p>
-    <strong>Amount:</strong>
-    <%= entity.amount %>
+  <p id='date'>
+    <%= entity.created_at.strftime("%d %b %Y") %>
+    at <%= entity.created_at.strftime("%I:%M %p") %>
   </p>
-
 </div>
