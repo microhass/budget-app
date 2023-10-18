@@ -1,6 +1,8 @@
-<div>
-    <h1>My App</h1>
+<div id="splash-screen">
+    <h1>Budgeter</h1>
 
-    <%= link_to "Login", new_user_session_path %>
-    <%= link_to "Sign Up", new_user_registration_path %>
+    <div id='splash-links'>
+        <%= link_to "Login", new_user_session_path, class: 'pri btn' %>
+        <%= link_to "Sign Up", new_user_registration_path, class: 'sec btn' %>
+    </div>
 </div>
