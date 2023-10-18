@@ -1,15 +1,17 @@
-<div id="group">
-  <div class='img-div'>
-    <%= image_tag group.icon %>
+<%= link_to group_path(group) do %>
+  <div id="group">
+    <div class='img-div'>
+      <%= image_tag group.icon %>
+    </div>
+
+    <div class='group-info'>
+      <h3><%= group.name %></h3>
+      <%= group.created_at.strftime("%d %b %Y") %>
+    </div>
+
+    <p>
+      $<%= group.entities.sum(:amount) %>
+    </p>
+
   </div>
-
-  <div>
-    <h3><%= group.name %></h3>
-    <%= group.created_at.strftime("%d %b %Y") %>
-  </div>
-
-  <p>
-    $<%= group.entities.sum(:amount) %>
-  </p>
-
-</div>
+<% end %>

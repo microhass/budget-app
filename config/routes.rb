@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
-  resources :groups
-  resources :entities
   devise_for :users
 
+  resources :groups, only: %i[index show new create] do
+    resources :entities, only: %i[create new]
+  end
+
+ get '/groups/:group_id/entities/new_form', to: 'entities#new', as: 'new_group_entity_form'
+ 
   # make users#splash the root path only if the user is not signed in, else make groups#index the root path
   authenticated :user do
     root 'groups#index', as: :authenticated_root

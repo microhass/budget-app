@@ -14,9 +14,9 @@
     <main>
       <p style="color: green"><%= notice %></p>
       <% if user_signed_in? then %>
-      <nav>
+      <div id='logout'>
         <%= button_to "Logout" , destroy_user_session_path, method: :delete, class: 'btn' %>
-      </nav>
+      </div>
       <% end %>
       <%= yield %>
     </main>
