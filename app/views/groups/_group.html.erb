@@ -1,12 +1,15 @@
-<div id="<%= dom_id group %>">
-  <p>
-    <strong>Name:</strong>
-    <%= group.name %>
-  </p>
+<div id="group">
+  <div class='img-div'>
+    <%= image_tag group.icon %>
+  </div>
+
+  <div>
+    <h3><%= group.name %></h3>
+    <%= group.created_at.strftime("%d %b %Y") %>
+  </div>
 
   <p>
-    <strong>Icon:</strong>
-    <%= group.icon %>
+    $<%= group.entities.sum(:amount) %>
   </p>
 
 </div>

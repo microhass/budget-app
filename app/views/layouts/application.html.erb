@@ -12,6 +12,7 @@
 
   <body>
     <main>
+      <p style="color: green"><%= notice %></p>
       <% if user_signed_in? then %>
       <nav>
         <%= button_to "Logout" , destroy_user_session_path, method: :delete, class: 'btn' %>

@@ -3,11 +3,11 @@ class ApplicationController < ActionController::Base
   before_action :update_allowed_parameters, if: :devise_controller?
 
   def after_sign_in_path_for(_resource)
-    users_path
+    authenticated_root_path
   end
 
   def after_sign_out_path_for(_resource)
-    root_path
+    unauthenticated_root_path
   end
 
   protected
