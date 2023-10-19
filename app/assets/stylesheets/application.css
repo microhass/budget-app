@@ -33,7 +33,7 @@ body {
 main {
   max-width: 500px;
   margin: 0 auto;
-  padding: 0;
+  padding-bottom: 2rem;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: #434b54;
@@ -41,6 +41,14 @@ main {
   margin-top: 2vh;
   border-radius: 5px;
   background-color: #fff;
+}
+
+#notice,
+#alert {
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #3778c2;
+  color: #fff;
 }
 
 .header {

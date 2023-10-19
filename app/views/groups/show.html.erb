@@ -1,5 +1,5 @@
 <div class='header'>
-  <%= link_to "Back", groups_path %>
+  <%= link_to "Back", authenticated_root_path %>
 </div>
 
 <div id="group">
@@ -16,9 +16,9 @@
 </div>
 
 <div id='transactions'>
-  <%= render partial: 'entities/entity', collection: @group.entities %>
+  <%= render partial: 'entities/entity', collection: @group.entities.order(created_at: :desc) %>
 
-  <%= link_to "Add a new transaction", new_entity_path, class: 'action btn' %>
+  <%= link_to "Add a new transaction", new_group_entity_path(@group), class: 'action btn' %>
 </div>
 
 
