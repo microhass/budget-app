@@ -86,7 +86,7 @@ main {
   place-items: center;
   border-radius: 3px;
   padding: 0.8rem;
-  width: 94%;
+  width: 90%;
   margin: 0 auto;
   margin-top: 10px;
 }
@@ -109,7 +109,7 @@ input[type='submit'] {
   background-color: #3778c2;
   color: #fff;
   padding: 0.8rem;
-  margin: 10px 0;
+  margin: 10px auto;
 }
 
 .btn.pri:hover {
