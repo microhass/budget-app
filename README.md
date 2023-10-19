@@ -150,6 +150,8 @@ Feel free to check the [issues page](../../issues/).
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 > I would like to thank my coding partners and mentor for the support, and Microverse for the opportunity.
+>
+> Special thanks to [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) for the design inspiration.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
