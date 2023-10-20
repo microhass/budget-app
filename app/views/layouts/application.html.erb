@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BudgetApp</title>
+    <title>Budgetize</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <main>
+      <p id='notice'><%= notice %></p>
+      <p id='alert'><%= alert %></p>
+      <% if user_signed_in? then %>
+      <div id='user-info'>
+        <p>Logged in as <%= current_user.email %></p>
+        <%= button_to "Logout" , destroy_user_session_path, method: :delete, class: 'btn' %>
+      </div>
+      <% end %>
+      <%= yield %>
+    </main>
   </body>
 </html>
