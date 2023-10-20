@@ -3,12 +3,10 @@ class EntitiesController < ApplicationController
   before_action :set_group, only: %i[new create]
   before_action :set_entity, only: %i[show edit update destroy]
 
-  # GET /entities/new
   def new
     @entity = Entity.new
   end
 
-  # POST /entities or /entities.json
   def create
     @entity = Entity.new(entity_params)
     @entity.author_id = current_user.id
@@ -24,7 +22,6 @@ class EntitiesController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_entity
     @entity = Entity.find(params[:id])
   end
@@ -33,7 +30,6 @@ class EntitiesController < ApplicationController
     @group = Group.find(params[:group_id])
   end
 
-  # Only allow a list of trusted parameters through.
   def entity_params
     params.require(:entity).permit(:name, :amount, group_ids: [])
   end

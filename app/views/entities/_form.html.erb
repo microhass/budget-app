@@ -21,7 +21,7 @@
 
   <div class='field' >
     <%= form.label :group_ids, 'Groups (Hold Ctrl & select)' %>
-    <%= form.collection_select :group_ids, Group.all, :id, :name, {prompt: 'Select Group'}, {multiple: true} %>
+    <%= form.collection_select :group_ids, current_user.groups.all, :id, :name, {prompt: 'Select Group'}, {multiple: true} %>
   </div>
 
   <div>

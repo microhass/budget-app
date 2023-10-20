@@ -79,12 +79,11 @@ main {
   padding: 10%;
 }
 
-/* #5fb523 #434b54 */
-#logout {
+#user-info {
   background-color: #3778c2;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 0 0.5rem;
   border-bottom: 1px solid #fff;
 }
@@ -99,7 +98,12 @@ main {
   margin-top: 10px;
 }
 
-#logout .btn {
+#user-info p {
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+#user-info .btn {
   background-color: red;
   color: #fff;
   width: fit-content;
@@ -107,7 +111,7 @@ main {
   margin-bottom: 15px;
 }
 
-#logout .btn:hover {
+#user-info .btn:hover {
   background-color: #fa3131;
   cursor: pointer;
 }
