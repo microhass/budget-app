@@ -1,6 +1,6 @@
 databases:
-  - name: budget-app
-    databaseName: budget-app
+  - name: budget_app-production
+    databaseName: budget-app_production
     user: budget-app
 
 services:
