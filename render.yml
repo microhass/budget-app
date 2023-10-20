@@ -1,0 +1,24 @@
+databases:
+  - name: budget-app
+    databaseName: budget-app
+    user: budget-app
+    ipAllowlist: []
+
+services:
+  - type: web
+    name: budget-app
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec rails s"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: budget-app
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+  - type: redis
+    name: redis
+    ipAllowlist: []
+    plan: free
+    maxMemoryPolicy: noeviction
