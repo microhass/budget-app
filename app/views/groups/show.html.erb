@@ -1,0 +1,25 @@
+<div class='header'>
+  <%= link_to "Back", authenticated_root_path %>
+</div>
+
+<div id="group" class='grid-display'>
+  <div class='img-div'>
+    <%= image_tag @group.icon %>
+  </div>
+
+  <div class='group-info grid-display'>
+    <h3><%= @group.name %></h3>
+    <p>
+    Total Transaction Amount: $<%= @group.entities.sum(:amount) %>
+  </p>
+  </div>
+</div>
+
+<div id='transactions' class='grid-display'>
+  <%= render partial: 'entities/entity', collection: @group.entities.order(created_at: :desc) %>
+
+  <%= link_to "Add a new transaction", new_group_entity_path(@group), class: 'action btn' %>
+</div>
+
+
+

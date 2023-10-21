@@ -1,0 +1,11 @@
+<div id="entity" class='grid-display'>
+  <div>
+    <p>Transaction: <%= entity.name %></p>
+    <p>$<%= entity.amount %></p>
+  </div>
+
+  <p id='date'>
+    <%= entity.created_at.strftime("%d %b %Y") %>
+    at <%= entity.created_at.strftime("%I:%M %p") %>
+  </p>
+</div>
